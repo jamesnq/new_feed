@@ -27,17 +27,23 @@ class _StoryState extends State<Story> {
             Positioned(
               child: CircleAvatar(
                 backgroundImage: AssetImage(widget.bigAvatar!),
-                radius: 30,
+                radius: 35,
               ),
             ),
-            Positioned(
-              child: CircleAvatar(
-                backgroundImage: AssetImage(widget.smallAvatar!),
-                radius: 10,
-              ),
-              right: 0,
-              bottom: 0,
-            ),
+            widget.smallAvatar == chloe
+                ? Positioned(
+                    child: Image.asset(widget.smallAvatar!, width: 25, height: 15,),
+                    right: 0,
+                    bottom: 0,
+                  )
+                : Positioned(
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage(widget.smallAvatar!),
+                      radius: 10,
+                    ),
+                    right: 0,
+                    bottom: 0,
+                  )
           ],
         ),
         TextButton(
@@ -47,8 +53,16 @@ class _StoryState extends State<Story> {
             });
           },
           child: isPressed
-              ? Text("Followed", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300, color: Colors.white))
-              : Text("Follow", style: TextStyle(fontSize: 13, fontWeight: FontWeight.w300, color: Colors.white)),
+              ? Text("Followed",
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.white))
+              : Text("Follow",
+                  style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.white)),
           style: ElevatedButton.styleFrom(
             primary: isPressed ? Color(0xFF654321) : Color(0xFF985F3E),
             shape: RoundedRectangleBorder(
