@@ -17,8 +17,8 @@ class HashTag extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(6)),
       ),
       child: Text(
-        this.text!,
-        style: TextStyle(color: Color(0xFFC0ABA4)),
+        text!,
+        style: const TextStyle(color: Color(0xFFC0ABA4)),
       ),
     );
   }

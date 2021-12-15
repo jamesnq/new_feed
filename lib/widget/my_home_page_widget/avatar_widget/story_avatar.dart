@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:new_feed/constant.dart';
 
 class Story extends StatefulWidget {
-  String? bigAvatar;
-  String? smallAvatar;
+  final String? bigAvatar;
+  final String? smallAvatar;
 
-  Story({
+  const Story({
     Key? key,
     required this.bigAvatar,
     required this.smallAvatar,
@@ -53,18 +53,18 @@ class _StoryState extends State<Story> {
             });
           },
           child: isPressed
-              ? Text("Followed",
+              ? const Text("Followed",
                   style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w300,
                       color: Colors.white))
-              : Text("Follow",
+              : const Text("Follow",
                   style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w300,
                       color: Colors.white)),
           style: ElevatedButton.styleFrom(
-            primary: isPressed ? Color(0xFF654321) : Color(0xFF985F3E),
+            primary: isPressed ? const Color(0xFF654321) : const Color(0xFF985F3E),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
