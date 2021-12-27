@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_feed/screen/product_screen.dart';
+import 'package:new_feed/widget/product_screen_widget/product_screen_background.dart';
 
 import '../../../constant.dart';
 
